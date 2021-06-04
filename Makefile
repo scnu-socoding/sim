@@ -42,8 +42,8 @@ SUBSYSTEM =	SOLARIS
 
 # Locations
 DIR =		/home/dick
-BINDIR =	$(DIR)/bin.`$(DIR)/bin/arch`
-MAN1DIR =	$(DIR)/man/man1
+BINDIR =	/usr/bin
+MAN1DIR =	/usr/share/man/man1
 
 # Commands
 COPY =		cp -p
@@ -391,7 +391,7 @@ install:	$(MAN1DIR)/sim.1 \
 		$(BINDIR)/sim_mira$(EXE) \
 		$(BINDIR)/sim_8086$(EXE)
 
-$(MAN1D)/sim.1:	sim.1
+$(MAN1DIR)/sim.1:	sim.1
 		$(COPY) sim.1 $@
 
 $(BINDIR)/sim_c$(EXE):	sim_c$(EXE)
